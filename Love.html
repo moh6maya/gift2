@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=div, initial-scale=1.0">
+	<meta name="title" content="3D Cube - For Crush | Aoudumber Bade">
+    <meta name="github" content="https://github.com/Aoudumber-Bade">
+	<link rel="stylesheet" href="./css/program.css">
+	<title>Pyar</title>
+</head>
+<script>
+  const startDate = new Date("2023-10-02 01:23:00"); 
+
+  function updateTimer() {
+    const now = new Date();
+    let diff = now - startDate;
+
+    let years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+    diff -= years * (1000 * 60 * 60 * 24 * 365);
+
+    let months = Math.floor(diff / (1000 * 60 * 60 * 24 * 30));
+    diff -= months * (1000 * 60 * 60 * 24 * 30);
+
+    let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    diff -= days * (1000 * 60 * 60 * 24);
+
+    let hours = Math.floor(diff / (1000 * 60 * 60));
+    diff -= hours * (1000 * 60 * 60);
+
+    let minutes = Math.floor(diff / (1000 * 60));
+    diff -= minutes * (1000 * 60);
+
+    let seconds = Math.floor(diff / 1000);
+
+    document.getElementById("timeTogether").innerHTML = `
+      <p style="color:white; font-size:20px; text-align:center;">
+        We have been together for ❤️ <br>
+        ${years} Years, ${months} Months, ${days} Days <br>
+        ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds
+      </p>`;
+  }
+
+  setInterval(updateTimer, 1000);
+
+  document.querySelector(".cube").addEventListener("click", () => {
+    document.getElementById("timeTogether").style.display = "block";
+    updateTimer();
+  });
+
+  document.getElementById("timeTogether").style.display = "none";
+</script>
+
+<body>
+	<div class="title">
+	
+		Happy Anniversary Jaan❤️
+		
+
+	</div>
+    <div class="message">
+  <div class="tip"></div>
+  <div id="timeTogether"></div> 
+</div>
+
+	<div class="cube">
+		
+		<div class="outer-cube">
+			<div class="outer-top">
+				<img src="images/i1.png" />
+			</div>
+			<div class="outer-bottom">
+				<img src="images/i2.png" />
+			</div>
+			<div class="outer-front">
+				<img src="images/i3.png" />
+			</div>
+			<div class="outer-back">
+				<img src="images/i4.png" />
+			</div>
+			<div class="outer-left">
+				<img src="images/i5.png" />
+			</div>
+			<div class="outer-right">
+				<img src="images/i6.png" />
+			</div>
+		</div>
+		<!-- 内层立方体 -->
+		<div class="inner-cube">
+			<div class="inner-top">
+				<img src="images/o1.jpg" />
+			</div>
+			<div class="inner-bottom">
+				<img src="images/o2.jpg" />
+			</div>
+			<div class="inner-front">
+				<img src="images/o3.jpg" />
+			</div>
+			<div class="inner-back">
+				<img src="images/o4.jpg" />
+			</div>
+			<div class="inner-left">
+				<img src="images/o5.jpg" />
+			</div>
+			<div class="inner-right">
+				<img src="images/o6.jpg" />
+			</div>
+		</div>
+	</div>
+	<div>
+		<div class="message">
+			<div class="tip">
+				<!-- Tip: Move the mouse in and out of the cube and the effect will be displayed! -->
+			</div>
+		</div>
+	</div>
+
+	<div id="copy">
+		<p class="text-center text-white text-sm">I Love You ❤️</p>
+	  </div>
+</body>
+
+</html>
